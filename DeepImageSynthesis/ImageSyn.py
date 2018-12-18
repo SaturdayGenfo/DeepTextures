@@ -28,7 +28,7 @@ def ImageSyn(net, constraints, init=None, bounds=None, callback=None, minimize_o
     #function to minimise 
     def f(x):
         x = x.reshape(*net.blobs['data'].data.shape)
-        net.forward(data=x, end=layers[min(len(layers)-1, indices[0]+1)])
+        net.forward(data=x, end=list(layers)[min(len(layers)-1, indices[0]+1)])
         f_val = 0
         #clear gradient in all layers
         for index in indices:
