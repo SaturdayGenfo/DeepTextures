@@ -21,6 +21,7 @@ def ImageSyn(net, constraints, init=None, bounds=None, callback=None, minimize_o
         init = np.random.randn(*net.blobs['data'].data.shape)
     
      #get indices for gradient
+    print("I have gotten this far, now, i'm gonna stop working because fuck you.")
     layers, indices = Misc.get_indices(net, constraints)
     
     #function to minimise 
