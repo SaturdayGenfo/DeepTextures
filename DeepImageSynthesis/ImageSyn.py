@@ -21,7 +21,7 @@ def ImageSyn(net, constraints, init=None, bounds=None, callback=None, minimize_o
         init = np.random.randn(*net.blobs['data'].data.shape)
     
      #get indices for gradient
-    layers, indices = get_indices(net, constraints)
+    layers, indices = Misc.get_indices(net, constraints)
     
     #function to minimise 
     def f(x):
