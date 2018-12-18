@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy.optimize import minimize
-from .Misc import get_indices
+from .Misc import *
 
 def ImageSyn(net, constraints, init=None, bounds=None, callback=None, minimize_options=None, gradient_free_region=None):
     '''
@@ -22,7 +22,7 @@ def ImageSyn(net, constraints, init=None, bounds=None, callback=None, minimize_o
     
      #get indices for gradient
     print("I have gotten this far, now, i'm gonna stop working because fuck you.")
-    layers, indices = Misc.get_indices(net, constraints)
+    layers, indices = get_indices(net, constraints)
     
     #function to minimise 
     def f(x):
